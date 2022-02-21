@@ -1,6 +1,6 @@
 # README
 
-# SE Rails starter for Project Loactable
+# SE Rails starter for Project Locatable
 
 What is Locatable?
 Creating an web-based application that allows the user to send their location to their emergency contacts and this sends an SMS and email notification.
