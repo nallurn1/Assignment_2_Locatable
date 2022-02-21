@@ -2,7 +2,7 @@
 
 # SE Rails starter for Project Locatable
 
-What is Locatable?
+###What is Locatable?
 Creating an web-based application that allows the user to send their location to their emergency contacts and this sends an SMS and email notification.
 
 This problem is innovative because it offers older users the privacy they need instead of using the locator 
