@@ -6,6 +6,7 @@ class HomeController < ApplicationController
   # Overrides ApplicationController's instructions to check for login by default
   skip_before_action :authenticate_user!
 
+
   # GET /
   #
   # This method is empty, yet it works?
@@ -17,5 +18,19 @@ class HomeController < ApplicationController
   # Also, any local variable made inside this method will also exist
   # in the view to be displayed. Do not look up information within the
   # view itself. Do it here, please!
-  def index; end
+  def index
+  end
+
+  def addmail
+  end
+
+  def viewmail
+  end
+
+  def managetags
+  end
+
+  def help
+  end
+
 end
