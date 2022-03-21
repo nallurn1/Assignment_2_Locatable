@@ -25,5 +25,5 @@ will be free to its users and not store/sell the users sensitive information.
 
 
 ## Updated Use Case diagram for the project:
-![Use case diagram for Mail Manager](./docs/docs/State_Chart.jpeg)
+![State Chart](./docs/State_Chart.jpeg)
 
