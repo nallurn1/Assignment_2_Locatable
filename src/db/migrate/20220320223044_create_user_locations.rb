@@ -10,5 +10,6 @@ class CreateUserLocations < ActiveRecord::Migration[6.0]
 
       t.timestamps
     end
+    add_index :user_locations, :userID, unique: true
   end
 end

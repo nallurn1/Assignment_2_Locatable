@@ -30,5 +30,13 @@
   <%= @user_profile.userLocation %>
 </p>
 
+<h2>User_Locations</h2>
+<% for user_location in @user_profile.user_locations %>
+  <ul>
+    <li><%= user_location.userID %></li>
+  </ul>
+<% end %>
+
 <%= link_to 'Edit', edit_user_profile_path(@user_profile) %> |
+<%= link_to 'Add User_Location', edit_user_profile_user_location_path(@user_profile) %> |
 <%= link_to 'Back', user_profiles_path %>

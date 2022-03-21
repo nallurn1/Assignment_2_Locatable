@@ -9,6 +9,7 @@ class CreateContacts < ActiveRecord::Migration[6.0]
       t.string :contactPhone
       t.string :contactRelation
       t.timestamps
+      
     # create_table :user_profiles do |t|
     #   t.integer :userID
     #   t.string :userName
@@ -18,5 +19,6 @@ class CreateContacts < ActiveRecord::Migration[6.0]
     #   t.string :userLocation
     #   t.timestamps
     end
+    add_index :contacts, :userID, unique: true
   end
 end

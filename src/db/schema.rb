@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_03_19_223044) do
+ActiveRecord::Schema.define(version: 2022_03_20_233046) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -31,6 +31,7 @@ ActiveRecord::Schema.define(version: 2022_03_19_223044) do
     t.string "contactRelation"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["userID"], name: "index_contacts_on_userID", unique: true
   end
 
   create_table "user_locations", force: :cascade do |t|
@@ -42,6 +43,7 @@ ActiveRecord::Schema.define(version: 2022_03_19_223044) do
     t.integer "zipcode"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["userID"], name: "index_user_locations_on_userID", unique: true
   end
 
   create_table "user_profiles", force: :cascade do |t|
@@ -53,6 +55,7 @@ ActiveRecord::Schema.define(version: 2022_03_19_223044) do
     t.string "userLocation"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["userID"], name: "index_user_profiles_on_userID", unique: true
   end
 
   create_table "users", force: :cascade do |t|

@@ -8,7 +8,8 @@ class CreateUserProfiles < ActiveRecord::Migration[6.0]
       t.string :userIP
       t.string :userLocation
       t.timestamps
-
+      end
+      add_index :user_profiles, :userID, unique: true
     # create_table :contacts do |t|
     #   t.belongs_to :user_profile, index: true, foreign_key: true
     #   # t.integer :userID
@@ -17,7 +18,6 @@ class CreateUserProfiles < ActiveRecord::Migration[6.0]
     #   # t.string :contactEmail
     #   # t.string :contactPhone
     #   # t.string :contactRelation
-    #   t.timestamps
-    end
+    #   t.timestamp
   end
 end

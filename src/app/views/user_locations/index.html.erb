@@ -18,15 +18,15 @@
   <tbody>
     <% @user_locations.each do |user_location| %>
       <tr>
-        <td><%= user_location.userID %></td>
+        <td><%= user_location.user_profile.userID %></td>
         <td><%= user_location.address1 %></td>
         <td><%= user_location.address2 %></td>
         <td><%= user_location.city %></td>
         <td><%= user_location.state %></td>
         <td><%= user_location.zipcode %></td>
-        <td><%= link_to 'Show', user_location %></td>
-        <td><%= link_to 'Edit', edit_user_location_path(user_location) %></td>
-        <td><%= link_to 'Destroy', user_location, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show Shark', [@user_profile] %></td>
+        <td><%= link_to 'Edit User_Location', edit_user_profile_user_location_path(@user_profile,user_location) %></td>
+        <td><%= link_to 'Destroy User_Location', [@user_profile, user_location], method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -34,4 +34,4 @@
 
 <br>
 
-<%= link_to 'New User Location', new_user_location_path %>
+<%= Link_to 'New User_Location', new_user_profile_user_location_path(@user_profile) %.>
