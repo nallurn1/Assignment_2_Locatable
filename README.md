@@ -24,5 +24,6 @@ No one should be afraid of not being able to go back home, and for that reason t
 will be free to its users and not store/sell the users sensitive information.
 
 
-<!-- [Installation Guide](docs/Installation_Guide.md) -->
+## Updated Use Case diagram for the project:
+<!-- ![Use case diagram for Mail Manager](./docs/Use_Case_Diagram.jpeg) -->
 
