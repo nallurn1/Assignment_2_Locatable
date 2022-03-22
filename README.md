@@ -20,6 +20,10 @@ will be free to its users and not store/sell the users sensitive information.
 ## State Chart for the project:
 ![State Chart](./docs/State_Chart.jpeg)
 
-## Design_Class_Diagramfor the project:
+## Design_Class_Diagram for the project:
 ![Design Class Diagram](./docs/Design_Class_Diagram.jpeg)
+
+## System Sequence Diagram for the project:
+![System Sequence Diagram](./docs/SSD.jpeg)
+
 
