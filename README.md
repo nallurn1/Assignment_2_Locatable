@@ -4,7 +4,7 @@
 ### What is Locatable?
 A web-based application that allows the user to send their location to their emergency contacts and this sends an SMS and email notification.
 
-###ISSUE WITH NAV BAR:
+### ISSUE WITH NAV BAR:
 Paths for the 3 data tables pages:
 Contacts: http://csc415-server16.hpc.tcnj.edu:3000/contacts
 User Profile: http://csc415-server16.hpc.tcnj.edu:3000/user_profiles
