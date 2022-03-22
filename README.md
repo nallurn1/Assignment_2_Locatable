@@ -2,15 +2,8 @@
 
 
 ### What is Locatable?
-###### Creating an web-based application that allows the user to send their location to their emergency contacts and this sends an SMS and email notification.
+A web-based application that allows the user to send their location to their emergency contacts and this sends an SMS and email notification.
 
-## Description of the problem to be solved:
-
-
-## Description of the objective of the proposed project to Address the problem:
-
-
-## Description of how the project will meet this objective:
 
 
 ## Explanation of what aspect of the project is innovative, and why:
