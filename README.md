@@ -24,6 +24,9 @@ No one should be afraid of not being able to go back home, and for that reason t
 will be free to its users and not store/sell the users sensitive information.
 
 
-## Updated Use Case diagram for the project:
+## State Chart for the project:
 ![State Chart](./docs/State_Chart.jpeg)
+
+## Design_Class_Diagramfor the project:
+![Design Class Diagram](./docs/Design_Class_Diagram.jpeg)
 
