@@ -2,5 +2,5 @@
 
 <%= render 'form', user_location: @user_location %>
 
-<%= link_to 'Show', [@user_profile, @user_location] %> |
-<%= link_to 'Back', user_profile_user_locations_path(@user_profile) %>
+<%= link_to 'Show', @user_location %> |
+<%= link_to 'Back', user_locations_path%>

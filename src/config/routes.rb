@@ -7,20 +7,20 @@
 # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 
 Rails.application.routes.draw do
-  resources :user_profiles do
+    resources :user_profiles
     resources :user_locations
     resources :contacts
-  end
+
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   # The root page, e.g. www.example.com/, is sent here
   # root 'controller#method_in_controller'
   root 'home#index'
 
   # Routes for pages other than the root
-  get 'home/addmail'
-  get 'home/viewmail'
-  get 'home/managetags'
-  get 'home/help'
+  # get 'home/addmail'
+  # get 'home/viewmail'
+  # get 'home/managetags'
+  # get 'home/help'
 
   # Devise authentification pages. This controlls the user login
   # and authentification system.

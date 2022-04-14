@@ -3,7 +3,23 @@
       <%= link_to app_name, root_path, class: 'navbar-brand' %>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
+        </li>
+          <li class="nav-item">
+          <% if request.path =~ /\/contacts/ %>
+            <%= link_to 'Emerency Contacts Infomation', contacts_path, class: 'nav-link activated' %>
+          <% else %>
+            <%= link_to 'Emerency Contacts Infomation', contacts_path, class: 'nav-link' %>
+          <% end %>
+        </li> 
 
+        </li>
+          <li class="nav-item">
+          <% if request.path =~ /\/user_locations/ %>
+            <%= link_to 'Your Saved Locations', user_locations_path, class: 'nav-link activated' %>
+          <% else %>
+            <%= link_to 'Your Saved Locations', user_locations_path, class: 'nav-link' %>
+          <% end %>
+        </li> 
         </ul>
         <ul class="navbar-nav">
           <%# If user, show account, else sign in %>

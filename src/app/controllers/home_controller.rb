@@ -21,16 +21,4 @@ class HomeController < ApplicationController
   def index
   end
 
-  def addmail
-  end
-
-  def viewmail
-  end
-
-  def managetags
-  end
-
-  def help
-  end
-
 end
