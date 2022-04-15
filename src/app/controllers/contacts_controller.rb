@@ -4,6 +4,7 @@ class ContactsController < ApplicationController
   # GET /contacts or /contacts.json
   def index
     @contacts = Contact.all
+    @alerts = Alert.all
   end
 
   # GET /contacts/1 or /contacts/1.json
@@ -61,6 +62,15 @@ class ContactsController < ApplicationController
     def set_contact
       @contact = Contact.find(params[:id])
     end
+
+    def updateAlerts(contact_id_val)
+      # Clear all associations from 'join' first.
+      Alert.where(contact_id: contact_id_val).delete_all
+      # Then, add the selected tag associations to 'join'.
+        the_alert = Alert.new
+        the_alert.contact_id = contact_id_val
+        the_alert.save
+    end 
 
     # Only allow a list of trusted parameters through.
     def contact_params
