@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Userid:</strong>
+  <%= @user_location.userID %>
+</p>
+
+<p>
+  <strong>Address1:</strong>
+  <%= @user_location.address1 %>
+</p>
+
+<p>
+  <strong>Address2:</strong>
+  <%= @user_location.address2 %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @user_location.city %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @user_location.state %>
+</p>
+
+<p>
+  <strong>Zipcode:</strong>
+  <%= @user_location.zipcode %>
+</p>
+
+<%= link_to 'Edit', edit_user_location_path%> |
+<%= link_to 'Back', user_locations_path%>

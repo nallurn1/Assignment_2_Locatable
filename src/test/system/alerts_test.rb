@@ -14,9 +14,10 @@ class AlertsTest < ApplicationSystemTestCase
     visit alerts_url
     click_on "New Alert"
 
-    fill_in "Contactid", with: @alert.contactID
-    fill_in "Message", with: @alert.message
-    fill_in "Timer", with: @alert.timer
+    fill_in "Alert text", with: @alert.alert_text
+    fill_in "Alert type", with: @alert.alert_type
+    fill_in "Contact", with: @alert.contact_id
+    fill_in "User", with: @alert.user_id
     click_on "Create Alert"
 
     assert_text "Alert was successfully created"
@@ -27,9 +28,10 @@ class AlertsTest < ApplicationSystemTestCase
     visit alerts_url
     click_on "Edit", match: :first
 
-    fill_in "Contactid", with: @alert.contactID
-    fill_in "Message", with: @alert.message
-    fill_in "Timer", with: @alert.timer
+    fill_in "Alert text", with: @alert.alert_text
+    fill_in "Alert type", with: @alert.alert_type
+    fill_in "Contact", with: @alert.contact_id
+    fill_in "User", with: @alert.user_id
     click_on "Update Alert"
 
     assert_text "Alert was successfully updated"

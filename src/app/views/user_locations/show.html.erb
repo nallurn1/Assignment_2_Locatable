@@ -1,34 +1,29 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Userid:</strong>
-  <%= @user_location.userID %>
-</p>
-
-<p>
-  <strong>Address1:</strong>
-  <%= @user_location.address1 %>
-</p>
-
-<p>
-  <strong>Address2:</strong>
-  <%= @user_location.address2 %>
+  <strong>Street:</strong>
+  <%= @user_location.user_location_street %>
 </p>
 
 <p>
   <strong>City:</strong>
-  <%= @user_location.city %>
+  <%= @user_location.user_location_city %>
 </p>
 
 <p>
   <strong>State:</strong>
-  <%= @user_location.state %>
+  <%= @user_location.user_location_state %>
 </p>
 
 <p>
-  <strong>Zipcode:</strong>
-  <%= @user_location.zipcode %>
+  <strong>Country:</strong>
+  <%= @user_location.user_location_country %>
 </p>
 
-<%= link_to 'Edit', edit_user_location_path%> |
-<%= link_to 'Back', user_locations_path%>
+<p>
+  <strong>User id:</strong>
+  <%= @user_location.user_id %>
+</p>
+
+<%= link_to 'Edit', edit_user_location_path(@user_location) %> |
+<%= link_to 'Back', user_locations_path %>

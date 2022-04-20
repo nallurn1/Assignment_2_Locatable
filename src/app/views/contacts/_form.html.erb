@@ -12,34 +12,31 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :userID %>
-    <%= form.number_field :userID %>
+    <%= form.label :Name %>
+    <%= form.text_field :contact_name %>
   </div>
 
   <div class="field">
-    <%= form.label :contactID %>
-    <%= form.number_field :contactID %>
+    <%= form.label :EMail %>
+    <%= form.text_field :contact_email %>
   </div>
 
   <div class="field">
-    <%= form.label :contactName %>
-    <%= form.text_field :contactName %>
+    <%= form.label :Phone %>
+    <%= form.text_field :contact_phone %>
   </div>
 
   <div class="field">
-    <%= form.label :contactEmail %>
-    <%= form.text_field :contactEmail %>
+    <%= form.label :Relation %>
+    <%= form.text_field :contact_relation %>
   </div>
 
+  
   <div class="field">
-    <%= form.label :contactPhone %>
-    <%= form.text_field :contactPhone %>
+    <%= form.label :User %>
+    <%= form.number_field :user_id %>
   </div>
 
-  <div class="field">
-    <%= form.label :contactRelation %>
-    <%= form.text_field :contactRelation %>
-  </div>
 
   <div class="actions">
     <%= form.submit %>

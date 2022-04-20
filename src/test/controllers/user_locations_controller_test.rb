@@ -17,7 +17,7 @@ class UserLocationsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create user_location" do
     assert_difference('UserLocation.count') do
-      post user_locations_url, params: { user_location: { address1: @user_location.address1, address2: @user_location.address2, city: @user_location.city, state: @user_location.state, userID: @user_location.userID, zipcode: @user_location.zipcode } }
+      post user_locations_url, params: { user_location: { user_location_city: @user_location.user_location_city, user_location_country: @user_location.user_location_country, user_location_state: @user_location.user_location_state, user_location_street: @user_location.user_location_street } }
     end
 
     assert_redirected_to user_location_url(UserLocation.last)
@@ -34,7 +34,7 @@ class UserLocationsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update user_location" do
-    patch user_location_url(@user_location), params: { user_location: { address1: @user_location.address1, address2: @user_location.address2, city: @user_location.city, state: @user_location.state, userID: @user_location.userID, zipcode: @user_location.zipcode } }
+    patch user_location_url(@user_location), params: { user_location: { user_location_city: @user_location.user_location_city, user_location_country: @user_location.user_location_country, user_location_state: @user_location.user_location_state, user_location_street: @user_location.user_location_street } }
     assert_redirected_to user_location_url(@user_location)
   end
 

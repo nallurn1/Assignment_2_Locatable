@@ -1,42 +1,55 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Userid:</strong>
-  <%= @user_profile.userID %>
+  <strong>User name:</strong>
+  <%= @user_profile.user_name %>
 </p>
 
 <p>
-  <strong>Username:</strong>
-  <%= @user_profile.userName %>
+  <strong>User email:</strong>
+  <%= @user_profile.user_email %>
 </p>
 
 <p>
-  <strong>Useremail:</strong>
-  <%= @user_profile.userEmail %>
+  <strong>User phone:</strong>
+  <%= @user_profile.user_phone %>
 </p>
 
 <p>
-  <strong>Userphone:</strong>
-  <%= @user_profile.userPhone %>
+  <strong>User address line1:</strong>
+  <%= @user_profile.user_address_line1 %>
 </p>
 
 <p>
-  <strong>Userip:</strong>
-  <%= @user_profile.userIP %>
+  <strong>User address line2:</strong>
+  <%= @user_profile.user_address_line2 %>
 </p>
 
 <p>
-  <strong>Userlocation:</strong>
-  <%= @user_profile.userLocation %>
+  <strong>User city:</strong>
+  <%= @user_profile.user_city %>
 </p>
 
-<h2>User_Locations</h2>
-<% for user_location in @user_profile.user_locations %>
-  <ul>
-    <li><%= user_location.userID %></li>
-  </ul>
-<% end %>
+<p>
+  <strong>User state:</strong>
+  <%= @user_profile.user_state %>
+</p>
+
+<p>
+  <strong>User zipcode:</strong>
+  <%= @user_profile.user_zipcode %>
+</p>
+
+<p>
+  <strong>User country:</strong>
+  <%= @user_profile.user_country %>
+</p>
+
+<p>
+  <strong>User id:</strong>
+  <%= @user_profile.user_id %>
+</p>
+
 
 <%= link_to 'Edit', edit_user_profile_path(@user_profile) %> |
-<%= link_to 'Add User_Location', edit_user_profile_user_location_path(@user_profile) %> |
 <%= link_to 'Back', user_profiles_path %>

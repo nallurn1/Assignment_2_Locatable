@@ -65,6 +65,6 @@ class UserProfilesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def user_profile_params
-      params.require(:user_profile).permit(:userID, :userName, :userEmail, :userPhone, :userIP, :userLocation)
+      params.require(:user_profile).permit(:user_name, :user_email, :user_phone, :user_address_line1, :user_address_line2, :user_city, :user_state, :user_zipcode, :user_country,:user_id)
     end
 end

@@ -1,17 +1,13 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  userID: 1
-  address1: MyString
-  address2: MyString
-  city: MyString
-  state: MyString
-  zipcode: 1
+  user_location_street: MyString
+  user_location_city: MyString
+  user_location_state: MyString
+  user_location_country: MyString
 
 two:
-  userID: 1
-  address1: MyString
-  address2: MyString
-  city: MyString
-  state: MyString
-  zipcode: 1
+  user_location_street: MyString
+  user_location_city: MyString
+  user_location_state: MyString
+  user_location_country: MyString

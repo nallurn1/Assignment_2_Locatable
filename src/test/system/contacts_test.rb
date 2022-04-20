@@ -14,12 +14,10 @@ class ContactsTest < ApplicationSystemTestCase
     visit contacts_url
     click_on "New Contact"
 
-    fill_in "Contactemail", with: @contact.contactEmail
-    fill_in "Contactid", with: @contact.contactID
-    fill_in "Contactname", with: @contact.contactName
-    fill_in "Contactphone", with: @contact.contactPhone
-    fill_in "Contactrelation", with: @contact.contactRelation
-    fill_in "Userid", with: @contact.userID
+    fill_in "Contact email", with: @contact.contact_email
+    fill_in "Contact name", with: @contact.contact_name
+    fill_in "Contact phone", with: @contact.contact_phone
+    fill_in "Contact relation", with: @contact.contact_relation
     click_on "Create Contact"
 
     assert_text "Contact was successfully created"
@@ -30,12 +28,10 @@ class ContactsTest < ApplicationSystemTestCase
     visit contacts_url
     click_on "Edit", match: :first
 
-    fill_in "Contactemail", with: @contact.contactEmail
-    fill_in "Contactid", with: @contact.contactID
-    fill_in "Contactname", with: @contact.contactName
-    fill_in "Contactphone", with: @contact.contactPhone
-    fill_in "Contactrelation", with: @contact.contactRelation
-    fill_in "Userid", with: @contact.userID
+    fill_in "Contact email", with: @contact.contact_email
+    fill_in "Contact name", with: @contact.contact_name
+    fill_in "Contact phone", with: @contact.contact_phone
+    fill_in "Contact relation", with: @contact.contact_relation
     click_on "Update Contact"
 
     assert_text "Contact was successfully updated"

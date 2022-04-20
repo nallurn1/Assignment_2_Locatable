@@ -12,33 +12,28 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :userID %>
-    <%= form.number_field :userID %>
+    <%= form.label :user_location_street %>
+    <%= form.text_field :user_location_street %>
   </div>
 
   <div class="field">
-    <%= form.label :address1 %>
-    <%= form.text_field :address1 %>
+    <%= form.label :user_location_city %>
+    <%= form.text_field :user_location_city %>
   </div>
 
   <div class="field">
-    <%= form.label :address2 %>
-    <%= form.text_field :address2 %>
+    <%= form.label :user_location_state %>
+    <%= form.text_field :user_location_state %>
   </div>
 
   <div class="field">
-    <%= form.label :city %>
-    <%= form.text_field :city %>
+    <%= form.label :user_location_country %>
+    <%= form.text_field :user_location_country %>
   </div>
 
   <div class="field">
-    <%= form.label :state %>
-    <%= form.text_field :state %>
-  </div>
-
-  <div class="field">
-    <%= form.label :zipcode %>
-    <%= form.number_field :zipcode %>
+    <%= form.label :user_id %>
+    <%= form.number_field :user_id %>
   </div>
 
   <div class="actions">

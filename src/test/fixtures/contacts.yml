@@ -1,17 +1,13 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  userID: 1
-  contactID: 1
-  contactName: MyString
-  contactEmail: MyString
-  contactPhone: MyString
-  contactRelation: MyString
+  contact_name: MyString
+  contact_email: MyString
+  contact_phone: MyString
+  contact_relation: MyString
 
 two:
-  userID: 1
-  contactID: 1
-  contactName: MyString
-  contactEmail: MyString
-  contactPhone: MyString
-  contactRelation: MyString
+  contact_name: MyString
+  contact_email: MyString
+  contact_phone: MyString
+  contact_relation: MyString

@@ -4,7 +4,6 @@ class ContactsController < ApplicationController
   # GET /contacts or /contacts.json
   def index
     @contacts = Contact.all
-    @alerts = Alert.all
   end
 
   # GET /contacts/1 or /contacts/1.json
@@ -23,8 +22,10 @@ class ContactsController < ApplicationController
   # POST /contacts or /contacts.json
   def create
     @contact = Contact.new(contact_params)
+
     respond_to do |format|
       if @contact.save
+        AlertMailer.with(contact: @contact).new_alert_email.deliver_later
         format.html { redirect_to contact_url(@contact), notice: "Contact was successfully created." }
         format.json { render :show, status: :created, location: @contact }
       else
@@ -63,17 +64,8 @@ class ContactsController < ApplicationController
       @contact = Contact.find(params[:id])
     end
 
-    def updateAlerts(contact_id_val)
-      # Clear all associations from 'join' first.
-      Alert.where(contact_id: contact_id_val).delete_all
-      # Then, add the selected tag associations to 'join'.
-        the_alert = Alert.new
-        the_alert.contact_id = contact_id_val
-        the_alert.save
-    end 
-
     # Only allow a list of trusted parameters through.
     def contact_params
-      params.require(:contact).permit(:userID, :contactID, :contactName, :contactEmail, :contactPhone, :contactRelation)
+      params.require(:contact).permit(:contact_name, :contact_email, :contact_phone, :contact_relation, :user_id)
     end
 end

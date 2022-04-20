@@ -12,18 +12,23 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :contactID %>
-    <%= form.number_field :contactID %>
+    <%= form.label :alert_text %>
+    <%= form.text_field :alert_text %>
   </div>
 
   <div class="field">
-    <%= form.label :message %>
-    <%= form.text_field :message %>
+    <%= form.label :alert_type %>
+    <%= form.text_field :alert_type %>
   </div>
 
   <div class="field">
-    <%= form.label :timer %>
-    <%= form.datetime_select :timer %>
+    <%= form.label :contact_id %>
+    <%= form.number_field :contact_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :user_id %>
+    <%= form.number_field :user_id %>
   </div>
 
   <div class="actions">

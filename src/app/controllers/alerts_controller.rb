@@ -4,6 +4,12 @@ class AlertsController < ApplicationController
   # GET /alerts or /alerts.json
   def index
     @alerts = Alert.all
+    string = "You IP address is #{client_ip}"
+    # if behind_vpn?
+    #   string << " and you are using a VPN"
+    # end
+
+    render plain: string
   end
 
   # GET /alerts/1 or /alerts/1.json
@@ -57,14 +63,36 @@ class AlertsController < ApplicationController
     end
   end
 
+  def make_abstract_request(client_ip)
+    uri = URI('https://ipgeolocation.abstractapi.com/v1/?api_key=a1d797d3953c46768d30534352b89d12&ip_address=#{client_ip}')
+  
+    http = Net::HTTP.new(uri.host, uri.port)
+    http.use_ssl = true
+    http.verify_mode = OpenSSL::SSL::VERIFY_PEER
+  
+    request =  Net::HTTP::Get.new(uri)
+  
+    response = http.request(request)
+    puts "Status code: #{ response.code }"
+    puts "Response body: #{ response.body }"
+  rescue StandardError => error
+    puts "Error (#{ error.message })"
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_alert
       @alert = Alert.find(params[:id])
     end
 
+    #Use callback to get the user's ip address
+    def client_ip
+      request.remote_ip
+    end
+
+
     # Only allow a list of trusted parameters through.
     def alert_params
-      params.require(:alert).permit(:contactID, :message, :timer)
+      params.require(:alert).permit(:alert_text, :alert_type, :contact_id, :user_id)
     end
 end

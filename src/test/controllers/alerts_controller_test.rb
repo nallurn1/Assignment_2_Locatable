@@ -17,7 +17,7 @@ class AlertsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create alert" do
     assert_difference('Alert.count') do
-      post alerts_url, params: { alert: { contactID: @alert.contactID, message: @alert.message, timer: @alert.timer } }
+      post alerts_url, params: { alert: { alert_text: @alert.alert_text, alert_type: @alert.alert_type, contact_id: @alert.contact_id, user_id: @alert.user_id } }
     end
 
     assert_redirected_to alert_url(Alert.last)
@@ -34,7 +34,7 @@ class AlertsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update alert" do
-    patch alert_url(@alert), params: { alert: { contactID: @alert.contactID, message: @alert.message, timer: @alert.timer } }
+    patch alert_url(@alert), params: { alert: { alert_text: @alert.alert_text, alert_type: @alert.alert_type, contact_id: @alert.contact_id, user_id: @alert.user_id } }
     assert_redirected_to alert_url(@alert)
   end
 

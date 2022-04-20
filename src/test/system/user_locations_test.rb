@@ -14,12 +14,10 @@ class UserLocationsTest < ApplicationSystemTestCase
     visit user_locations_url
     click_on "New User Location"
 
-    fill_in "Address1", with: @user_location.address1
-    fill_in "Address2", with: @user_location.address2
-    fill_in "City", with: @user_location.city
-    fill_in "State", with: @user_location.state
-    fill_in "Userid", with: @user_location.userID
-    fill_in "Zipcode", with: @user_location.zipcode
+    fill_in "User location city", with: @user_location.user_location_city
+    fill_in "User location country", with: @user_location.user_location_country
+    fill_in "User location state", with: @user_location.user_location_state
+    fill_in "User location street", with: @user_location.user_location_street
     click_on "Create User location"
 
     assert_text "User location was successfully created"
@@ -30,12 +28,10 @@ class UserLocationsTest < ApplicationSystemTestCase
     visit user_locations_url
     click_on "Edit", match: :first
 
-    fill_in "Address1", with: @user_location.address1
-    fill_in "Address2", with: @user_location.address2
-    fill_in "City", with: @user_location.city
-    fill_in "State", with: @user_location.state
-    fill_in "Userid", with: @user_location.userID
-    fill_in "Zipcode", with: @user_location.zipcode
+    fill_in "User location city", with: @user_location.user_location_city
+    fill_in "User location country", with: @user_location.user_location_country
+    fill_in "User location state", with: @user_location.user_location_state
+    fill_in "User location street", with: @user_location.user_location_street
     click_on "Update User location"
 
     assert_text "User location was successfully updated"

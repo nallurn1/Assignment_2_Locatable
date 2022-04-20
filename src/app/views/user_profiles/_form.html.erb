@@ -12,33 +12,53 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :userID %>
-    <%= form.number_field :userID %>
+    <%= form.label :user_name %>
+    <%= form.text_field :user_name %>
   </div>
 
   <div class="field">
-    <%= form.label :userName %>
-    <%= form.text_field :userName %>
+    <%= form.label :user_email %>
+    <%= form.text_field :user_email %>
   </div>
 
   <div class="field">
-    <%= form.label :userEmail %>
-    <%= form.text_field :userEmail %>
+    <%= form.label :user_phone %>
+    <%= form.text_field :user_phone %>
   </div>
 
   <div class="field">
-    <%= form.label :userPhone %>
-    <%= form.text_field :userPhone %>
+    <%= form.label :user_address_line1 %>
+    <%= form.text_field :user_address_line1 %>
   </div>
 
   <div class="field">
-    <%= form.label :userIP %>
-    <%= form.text_field :userIP %>
+    <%= form.label :user_address_line2 %>
+    <%= form.text_field :user_address_line2 %>
   </div>
 
   <div class="field">
-    <%= form.label :userLocation %>
-    <%= form.text_field :userLocation %>
+    <%= form.label :user_city %>
+    <%= form.text_field :user_city %>
+  </div>
+
+  <div class="field">
+    <%= form.label :user_state %>
+    <%= form.text_field :user_state %>
+  </div>
+
+  <div class="field">
+    <%= form.label :user_zipcode %>
+    <%= form.number_field :user_zipcode %>
+  </div>
+
+  <div class="field">
+    <%= form.label :user_country %>
+    <%= form.text_field :user_country %>
+  </div>
+
+  <div class="field">
+    <%= form.label :user_id %>
+    <%= form.number_field :user_id %>
   </div>
 
   <div class="actions">

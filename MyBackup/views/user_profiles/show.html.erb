@@ -1,0 +1,42 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Userid:</strong>
+  <%= @user_profile.userID %>
+</p>
+
+<p>
+  <strong>Username:</strong>
+  <%= @user_profile.userName %>
+</p>
+
+<p>
+  <strong>Useremail:</strong>
+  <%= @user_profile.userEmail %>
+</p>
+
+<p>
+  <strong>Userphone:</strong>
+  <%= @user_profile.userPhone %>
+</p>
+
+<p>
+  <strong>Userip:</strong>
+  <%= @user_profile.userIP %>
+</p>
+
+<p>
+  <strong>Userlocation:</strong>
+  <%= @user_profile.userLocation %>
+</p>
+
+<h2>User_Locations</h2>
+<% for user_location in @user_profile.user_locations %>
+  <ul>
+    <li><%= user_location.userID %></li>
+  </ul>
+<% end %>
+
+<%= link_to 'Edit', edit_user_profile_path(@user_profile) %> |
+<%= link_to 'Add User_Location', edit_user_profile_user_location_path(@user_profile) %> |
+<%= link_to 'Back', user_profiles_path %>

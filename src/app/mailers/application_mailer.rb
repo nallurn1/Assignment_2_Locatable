@@ -3,6 +3,6 @@
 # Controls emails sent out from the application
 # TCNJ: you likely won't need this
 class ApplicationMailer < ActionMailer::Base
-  default from: 'from@example.com'
+  default from: 'locatableapp@gmail.com'
   layout 'mailer'
 end

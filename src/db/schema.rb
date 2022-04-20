@@ -10,15 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_04_15_170228) do
+ActiveRecord::Schema.define(version: 2022_04_18_212339) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "alerts", force: :cascade do |t|
-    t.integer "contactID"
-    t.string "message"
-    t.datetime "timer"
+    t.string "alert_text"
+    t.string "alert_type"
+    t.integer "contact_id"
+    t.integer "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -31,39 +32,39 @@ ActiveRecord::Schema.define(version: 2022_04_15_170228) do
   end
 
   create_table "contacts", force: :cascade do |t|
-    t.integer "userID"
-    t.integer "contactID"
-    t.string "contactName"
-    t.string "contactEmail"
-    t.string "contactPhone"
-    t.string "contactRelation"
+    t.string "contact_name"
+    t.string "contact_email"
+    t.string "contact_phone"
+    t.string "contact_relation"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["userID"], name: "index_contacts_on_userID", unique: true
+    t.integer "user_id"
   end
 
   create_table "user_locations", force: :cascade do |t|
-    t.integer "userID"
-    t.string "address1"
-    t.string "address2"
-    t.string "city"
-    t.string "state"
-    t.integer "zipcode"
+    t.string "user_location_street"
+    t.string "user_location_city"
+    t.string "user_location_state"
+    t.string "user_location_country"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["userID"], name: "index_user_locations_on_userID", unique: true
+    t.integer "user_id"
+    t.decimal "user_ip"
   end
 
   create_table "user_profiles", force: :cascade do |t|
-    t.integer "userID"
-    t.string "userName"
-    t.string "userEmail"
-    t.string "userPhone"
-    t.string "userIP"
-    t.string "userLocation"
+    t.string "user_name"
+    t.string "user_email"
+    t.string "user_phone"
+    t.string "user_address_line1"
+    t.string "user_address_line2"
+    t.string "user_city"
+    t.string "user_state"
+    t.integer "user_zipcode"
+    t.string "user_country"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["userID"], name: "index_user_profiles_on_userID", unique: true
+    t.integer "user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -78,4 +79,9 @@ ActiveRecord::Schema.define(version: 2022_04_15_170228) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "alerts", "contacts"
+  add_foreign_key "alerts", "users"
+  add_foreign_key "contacts", "users"
+  add_foreign_key "user_locations", "users"
+  add_foreign_key "user_profiles", "users"
 end

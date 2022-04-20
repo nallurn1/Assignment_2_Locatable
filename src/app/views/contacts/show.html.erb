@@ -1,33 +1,28 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Userid:</strong>
-  <%= @contact.userID %>
+  <strong>Name:</strong>
+  <%= @contact.contact_name %>
 </p>
 
 <p>
-  <strong>Contactid:</strong>
-  <%= @contact.contactID %>
+  <strong>E-Mail:</strong>
+  <%= @contact.contact_email %>
 </p>
 
 <p>
-  <strong>Contactname:</strong>
-  <%= @contact.contactName %>
+  <strong>Phone:</strong>
+  <%= @contact.contact_phone %>
 </p>
 
 <p>
-  <strong>Contactemail:</strong>
-  <%= @contact.contactEmail %>
+  <strong>Relation:</strong>
+  <%= @contact.contact_relation %>
 </p>
 
 <p>
-  <strong>Contactphone:</strong>
-  <%= @contact.contactPhone %>
-</p>
-
-<p>
-  <strong>Contactrelation:</strong>
-  <%= @contact.contactRelation %>
+  <strong>User:</strong>
+  <%= @contact.user_id %>
 </p>
 
 <%= link_to 'Edit', edit_contact_path(@contact) %> |

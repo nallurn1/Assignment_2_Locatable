@@ -1,7 +1,7 @@
-class ReminderMailer < ApplicationMailer
-    def new_reminder_email
-        @alert = params[:alert]
+class AlertMailer < ApplicationMailer
+    def new_alert_email
+        @contact = params[:contact]
 
-        mail(to: @contact.user_email, subject: "Important Alert")
+        mail(to: @contact.contact_email, subject: "ImportantAlert")
     end
 end

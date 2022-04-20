@@ -14,12 +14,15 @@ class UserProfilesTest < ApplicationSystemTestCase
     visit user_profiles_url
     click_on "New User Profile"
 
-    fill_in "Useremail", with: @user_profile.userEmail
-    fill_in "Userid", with: @user_profile.userID
-    fill_in "Userip", with: @user_profile.userIP
-    fill_in "Userlocation", with: @user_profile.userLocation
-    fill_in "Username", with: @user_profile.userName
-    fill_in "Userphone", with: @user_profile.userPhone
+    fill_in "User address line1", with: @user_profile.user_address_line1
+    fill_in "User address line2", with: @user_profile.user_address_line2
+    fill_in "User city", with: @user_profile.user_city
+    fill_in "User country", with: @user_profile.user_country
+    fill_in "User email", with: @user_profile.user_email
+    fill_in "User name", with: @user_profile.user_name
+    fill_in "User phone", with: @user_profile.user_phone
+    fill_in "User state", with: @user_profile.user_state
+    fill_in "User zipcode", with: @user_profile.user_zipcode
     click_on "Create User profile"
 
     assert_text "User profile was successfully created"
@@ -30,12 +33,15 @@ class UserProfilesTest < ApplicationSystemTestCase
     visit user_profiles_url
     click_on "Edit", match: :first
 
-    fill_in "Useremail", with: @user_profile.userEmail
-    fill_in "Userid", with: @user_profile.userID
-    fill_in "Userip", with: @user_profile.userIP
-    fill_in "Userlocation", with: @user_profile.userLocation
-    fill_in "Username", with: @user_profile.userName
-    fill_in "Userphone", with: @user_profile.userPhone
+    fill_in "User address line1", with: @user_profile.user_address_line1
+    fill_in "User address line2", with: @user_profile.user_address_line2
+    fill_in "User city", with: @user_profile.user_city
+    fill_in "User country", with: @user_profile.user_country
+    fill_in "User email", with: @user_profile.user_email
+    fill_in "User name", with: @user_profile.user_name
+    fill_in "User phone", with: @user_profile.user_phone
+    fill_in "User state", with: @user_profile.user_state
+    fill_in "User zipcode", with: @user_profile.user_zipcode
     click_on "Update User profile"
 
     assert_text "User profile was successfully updated"

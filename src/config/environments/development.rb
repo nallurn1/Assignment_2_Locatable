@@ -14,6 +14,8 @@ Rails.application.configure do
   # Show full error reports.
   config.consider_all_requests_local = true
 
+  config.hosts << "csc415-server16.hpc.tcnj.edu"
+
   # Enable/disable caching. By default caching is disabled.
   # Run rails dev:cache to toggle caching.
   if Rails.root.join('tmp', 'caching-dev.txt').exist?
@@ -33,10 +35,25 @@ Rails.application.configure do
   # Store uploaded files on the local file system (see config/storage.yml for options).
   config.active_storage.service = :local
 
-  # Don't care if the mailer can't send.
-  config.action_mailer.raise_delivery_errors = false
+  config.web_console.whiny_requests = false
 
-  config.action_mailer.perform_caching = false
+  # # Don't care if the mailer can't send.
+  # config.action_mailer.raise_delivery_errors = false
+
+  # config.action_mailer.perform_caching = true
+  # config.action_mailer.delivery_method = :smtp
+  # host = 'localhost:3000'
+  # config.action_mailer.default_url_options = { :host => 'localhost:3000', protocol: 'http' }
+
+  # # SMTP settings for gmail
+  # config.action_mailer.smtp_settings = {
+  #   :address              => "smtp.gmail.com",
+  #   :port                 => 587,
+  #   :user_name            => <locatableapp@gmail.com>,
+  #   :password             => <HelpMe12!>,
+  #   :authentication       => "plain",
+  #   :enable_starttls_auto => true
+  # }
 
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log
@@ -63,6 +80,6 @@ Rails.application.configure do
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
 
   # Devise host settings
-  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
-  config.hosts.clear
+  #config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+  #config.hosts.clear
 end

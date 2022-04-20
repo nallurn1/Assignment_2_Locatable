@@ -11,15 +11,35 @@
             <%= link_to 'Emerency Contacts Infomation', contacts_path, class: 'nav-link' %>
           <% end %>
         </li> 
+        
+        </li>
+          <li class="nav-item">
+          <% if request.path =~ /\/user_profiles/ %>
+            <%= link_to 'Manage Profile', user_profiles_path, class: 'nav-link activated' %>
+          <% else %>
+            <%= link_to 'Manage Profile', user_profiles_path, class: 'nav-link' %>
+          <% end %>
+        </li> 
 
         </li>
           <li class="nav-item">
           <% if request.path =~ /\/user_locations/ %>
-            <%= link_to 'Your Saved Locations', user_locations_path, class: 'nav-link activated' %>
+            <%= link_to 'Manage User Locations', user_locations_path, class: 'nav-link activated' %>
           <% else %>
-            <%= link_to 'Your Saved Locations', user_locations_path, class: 'nav-link' %>
+            <%= link_to 'Manage User Locations', user_locations_path, class: 'nav-link' %>
           <% end %>
         </li> 
+
+        </li>
+          <li class="nav-item">
+          <% if request.path =~ /\/alerts/ %>
+            <%= link_to 'Manage Alerts', alerts_path, class: 'nav-link activated' %>
+          <% else %>
+            <%= link_to 'Manage Alerts', alerts_path, class: 'nav-link' %>
+          <% end %>
+        </li> 
+      
+
         </ul>
         <ul class="navbar-nav">
           <%# If user, show account, else sign in %>
