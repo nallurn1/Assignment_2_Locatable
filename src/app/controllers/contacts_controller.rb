@@ -1,5 +1,13 @@
+ # Project name: Locatable
+ # Description: Sending out alerts to the user's close contacts when they are in possible danger
+ # Filename: contacts_controller.rb
+ # Description: The CRUD functionilities needed for the contacts 
+ # Last modified on: 4/20/22
+ # Code written by Nithya Nalluri
+ 
 class ContactsController < ApplicationController
   before_action :set_contact, only: %i[ show edit update destroy ]
+
 
   # GET /contacts or /contacts.json
   def index
@@ -25,7 +33,8 @@ class ContactsController < ApplicationController
 
     respond_to do |format|
       if @contact.save
-        AlertMailer.with(contact: @contact).new_alert_email.deliver_later
+        #Sending the email
+        
         format.html { redirect_to contact_url(@contact), notice: "Contact was successfully created." }
         format.json { render :show, status: :created, location: @contact }
       else

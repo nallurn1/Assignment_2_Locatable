@@ -1,9 +1,17 @@
+ # Project name: Locatable
+ # Description: Sending out alerts to the user's close contacts when they are in possible danger
+ # Filename: user_profile_controller.rb
+ # Description: The CRUD functionilities needed for the user_profiles
+ # Last modified on: 4/20/22
+ # Code written by Nithya Nalluri
+
 class UserProfilesController < ApplicationController
   before_action :set_user_profile, only: %i[ show edit update destroy ]
 
   # GET /user_profiles or /user_profiles.json
   def index
-    @user_profiles = UserProfile.all
+    @user_profiles = UserProfile.where(user_id: [2])
+
   end
 
   # GET /user_profiles/1 or /user_profiles/1.json

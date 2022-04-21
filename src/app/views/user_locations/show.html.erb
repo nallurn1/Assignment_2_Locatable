@@ -1,3 +1,11 @@
+<%# 
+  Project name: Locatable
+  Description: Sending out alerts to the user's close contacts when they are in possible danger
+  Filename: show.html.erb
+  Description: Creating a view for given user_location
+  Last modified on: 4/20/22
+  Code written by Nithya Nalluri
+%>
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -23,6 +31,11 @@
 <p>
   <strong>User id:</strong>
   <%= @user_location.user_id %>
+</p>
+
+<p>
+  <strong>User ip:</strong>
+  <%= @user_location.user_ip %>
 </p>
 
 <%= link_to 'Edit', edit_user_location_path(@user_location) %> |

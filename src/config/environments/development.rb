@@ -1,3 +1,10 @@
+ # Project name: Locatable
+ # Description: Sending out alerts to the user's close contacts when they are in possible danger
+ # Filename: development.rb
+ # Description: this has all the configations used when the website is running
+ # Last modified on: 4/20/22
+ # Code written by Nithya Nalluri
+
 # frozen_string_literal: true
 
 Rails.application.configure do
@@ -37,14 +44,15 @@ Rails.application.configure do
 
   config.web_console.whiny_requests = false
 
-  # # Don't care if the mailer can't send.
-  # config.action_mailer.raise_delivery_errors = false
+  # Don't care if the mailer can't send.
+  config.action_mailer.raise_delivery_errors = false
 
-  # config.action_mailer.perform_caching = true
-  # config.action_mailer.delivery_method = :smtp
+  config.action_mailer.perform_caching = true
+  config.action_mailer.delivery_method = :smtp
   # host = 'localhost:3000'
-  # config.action_mailer.default_url_options = { :host => 'localhost:3000', protocol: 'http' }
+  config.action_mailer.default_url_options = { :host => 'localhost:3000', protocol: 'http' }
 
+  #Need to comment when starting up website, uncomment when the webiste it up
   # # SMTP settings for gmail
   # config.action_mailer.smtp_settings = {
   #   :address              => "smtp.gmail.com",

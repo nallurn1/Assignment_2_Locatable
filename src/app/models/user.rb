@@ -1,3 +1,9 @@
+ # Project name: Locatable
+ # Description: Sending out alerts to the user's close contacts when they are in possible danger
+ # Filename: user.rb
+ # Description: Default account configurations and parents to all scaffolds
+ # Last modified on: 4/20/22
+
 # frozen_string_literal: true
 
 # Represents a user of the web application

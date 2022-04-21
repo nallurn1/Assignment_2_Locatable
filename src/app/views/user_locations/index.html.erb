@@ -1,16 +1,26 @@
+<%# 
+  Project name: Locatable
+  Description: Sending out alerts to the user's close contacts when they are in possible danger
+  Filename: index.html.erb
+  Description: Index layout for the user_locations
+  Last modified on: 4/20/22
+  Code written by Nithya Nalluri
+%>
+
 <p id="notice"><%= notice %></p>
 
-<h1>User Locations</h1>
-
-<table class="table table-striped">
+<h1 class="text-center">Your Locations</h1>
+<h1></h1>
+<table class="table table-striped", style= "width:100%;text-align:left";>
   <thead>
+
     <tr>
       <th>Street</th>
       <th>City</th>
       <th>State</th>
       <th>Country</th>
       <th>User id: REMOVE</th>
-      <th>Current IP address</th>
+      <th>Current ip address</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -24,14 +34,15 @@
         <td><%= user_location.user_location_country %></td>
         <td><%= user_location.user_id %></td>
         <td><%= user_location.user_ip %></td>
-        <td><%= link_to 'Show', user_location %></td>
-        <td><%= link_to 'Edit', edit_user_location_path(user_location) %></td>
-        <td><%= link_to 'Delete', user_location, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', user_location, style: "color: black;"%></td>
+        <td><%= link_to 'Edit', edit_user_location_path(user_location), style: "color: black;" %></td>
+        <td><%= link_to 'Delete', user_location,style: "color: black;", method: :delete, data: { confirm: 'Do you want to delete your location?'} %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
 <br>
-
-<%= link_to 'New User Location', new_user_location_path %>
+<br>
+<div class="buttons-container">
+<%= link_to 'New User Location', new_user_location_path, class: "btn btn-dark btn-lg" %>

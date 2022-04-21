@@ -11,17 +11,12 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="field" class="form-group" class="form-control">
     <%= form.label :alert_text %>
-    <%= form.text_field :alert_text %>
+    <%= form.text_field :alert_text, required: true %>
   </div>
 
-  <div class="field">
-    <%= form.label :alert_type %>
-    <%= form.text_field :alert_type %>
-  </div>
-
-  <div class="field">
+  <div class="field" class="form-group" class="form-control">
     <%= form.label :contact_id %>
     <%= form.number_field :contact_id %>
   </div>

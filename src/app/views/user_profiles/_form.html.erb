@@ -1,3 +1,12 @@
+<%# 
+  Project name: Locatable
+  Description: Sending out alerts to the user's close contacts when they are in possible danger
+  Filename: _form.html.erb
+  Description: Creating a view for editing the user_profiles
+  Last modified on: 4/20/22
+  Code written by Nithya Nalluri
+%>
+
 <%= form_with(model: user_profile, local: true) do |form| %>
   <% if user_profile.errors.any? %>
     <div id="error_explanation">
@@ -12,52 +21,52 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :user_name %>
+    <%= form.label :Name %>
     <%= form.text_field :user_name %>
   </div>
 
   <div class="field">
-    <%= form.label :user_email %>
+    <%= form.label :EMail %>
     <%= form.text_field :user_email %>
   </div>
 
   <div class="field">
-    <%= form.label :user_phone %>
+    <%= form.label :Phone %>
     <%= form.text_field :user_phone %>
   </div>
 
   <div class="field">
-    <%= form.label :user_address_line1 %>
+    <%= form.label :Address_Line1 %>
     <%= form.text_field :user_address_line1 %>
   </div>
 
   <div class="field">
-    <%= form.label :user_address_line2 %>
+    <%= form.label :Address_Line2 %>
     <%= form.text_field :user_address_line2 %>
   </div>
 
   <div class="field">
-    <%= form.label :user_city %>
+    <%= form.label :City %>
     <%= form.text_field :user_city %>
   </div>
 
   <div class="field">
-    <%= form.label :user_state %>
+    <%= form.label :State %>
     <%= form.text_field :user_state %>
   </div>
 
   <div class="field">
-    <%= form.label :user_zipcode %>
+    <%= form.label :Zipcode %>
     <%= form.number_field :user_zipcode %>
   </div>
 
   <div class="field">
-    <%= form.label :user_country %>
+    <%= form.label :Country %>
     <%= form.text_field :user_country %>
   </div>
 
   <div class="field">
-    <%= form.label :user_id %>
+    <%= form.label :User %>
     <%= form.number_field :user_id %>
   </div>
 

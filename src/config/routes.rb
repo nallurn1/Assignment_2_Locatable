@@ -1,3 +1,10 @@
+ # Project name: Locatable
+ # Description: Sending out alerts to the user's close contacts when they are in possible danger
+ # Filename: routes.rb
+ # Description: The routes for all the pages for this web application
+ # Last modified on: 4/20/22
+ # Code written by Nithya Nalluri
+
 # frozen_string_literal: true
 
 # This file tells the Rails server how incoming requests are sent to which
@@ -16,6 +23,8 @@ Rails.application.routes.draw do
   # The root page, e.g. www.example.com/, is sent here
   # root 'controller#method_in_controller'
   root 'home#index'
+  get 'home/about'
+  get 'home/instructions'
 
   # Routes for pages other than the root
   # get 'home/addmail'
@@ -27,6 +36,9 @@ Rails.application.routes.draw do
   # and authentification system.
   devise_for :users
 
+  devise_scope :user do  
+     get '/users/sign_out' => 'devise/sessions#destroy'     
+  end
   # Examples:
   #
   # # Add app CRUD operations from a controller. Used with scaffolding.
