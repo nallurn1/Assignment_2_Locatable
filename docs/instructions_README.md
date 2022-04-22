@@ -52,7 +52,9 @@ Go to the `<repo_name>/src/` folder within your cloned repository. This folder h
 
 ### Locatable can now be ran using the following commands within the `src` folder of the cloned repository
 1)`ip addr show eth0`
+  
 2) `rails s (or rails server) --binding xxx.xxx.xxx.xxx`
+  
 3) The app should be available in the browser at http://csc415-serverXX.hpc.tcnj.edu:3000/ (XX is your server number)
 
 
