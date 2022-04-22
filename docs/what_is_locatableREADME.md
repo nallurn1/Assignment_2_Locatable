@@ -53,7 +53,7 @@ carfully handle all the user's sensitive information.
 ![Use Case](use_case.jpeg)
 
 #### Use Case Descriptions for the project:
-![Use Case Descriptions.jpeg](use_case_sescription.jpeg)
+![Use Case Descriptions.jpeg](use_case_description.jpeg)
 
 #### Design Class Diagram for the project:
 ![Design Class Diagram](design_class_diagram.jpeg)
