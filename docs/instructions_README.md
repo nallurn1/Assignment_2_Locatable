@@ -1,56 +1,63 @@
-# How to Install Locatable onto your VM or Local Machine
+# How to Install Locatable onto your TCNJ student accounts in the VM 
 
-#### Step 1: Clone the Repository
-* Login your githb and VM and create a new repository in the desired locations within the VM
-    *Clone the new repositsory into a new branch using this format: "youinitals_lastname_locatable
-      * Use the command git --switch <branch> or git --checkout <branch> 
+***
+
+#### Create a folder to clone repository into
+
+1) mkdir <folder_name>
+2) cd <folder_name>
+  
+## How to set up the path to the needed github branch:
+1) 'git init'
+2) 'git remote add origin https://github.com/nallurn1/Assignment_2_Locatable.git'
+3) 'git fetch'
+4) 'git branch -av' (this lists remote branch names)
+5) 'git checkout origin <branchname>'
+  
+#### Clone the Repository: Locatable Main Branch
+'git clone https://github.com/nallurn1/Assignment_2_Locatable.git'
+     
+
+#### Run the installruby.sh script to test if you have the right version of ruby and rails running on the server
+1) ./installruby.sh
+
+#### To check your version rails and ruby using `rails -v` or `rails --version`.
+1) ruby -v
+   * Ruby (3.0.2) 
+
+2) rails -v 
+   * Rails (7.0.2.3)
     
-#### Step 2: Go to Current Working Directory
-* cd <repo_name>
-After creating the empty repository, clone your Safe Routes branch into the repository by inputting the following commands into your terminal:
+***
+Create an SSH key or generate a github token to allow for authentication needed when using the git commands
+* For more information of the SSH key process: [Setting up SSH keys with GitHub](Setting_up_SSH_keys_GitHub.md).
+***
+   
+   
+#### Installing dependencies
+Go to the `<repo_name>/src/` folder within your cloned repository. This folder has all the ocde files, and all the dependencies must be installed here. Please run the following commands. 
 
-'git init'
-'git remote add origin https://github.com/'
-'git fetch'
-'git branch -r' (this lists remote branch names)
-'git checkout origin/branchName'
-Installing dependencies
+1) 'bundle install'
+2) 'yarn install'
+3) 'rails webpacker:install'
+  
+#### If you face any issues with the `bundle install` command please check the instructions: [Installation Guide](docs/Installation_Guide.md)
 
-After cloning your branch, be sure to navigate to the "src" folder in your repository by inputting:
-
-cd src
-
-Once in the "src" folder, type the following commands to install the prerequisites:
-
-'bundle install'
-'yarn install'
-'rails webpacker:install'
-Once these have been successfully installed, type in the following commands to set up the database:
-
-'rails db:create'
-'rails db:migrate:reset'
-'rails db:migrate'
-'rails db:seed'
-This application requires developers to create a Bing Maps Key. After creating the key, create a file in the src directory called .env, which will contain the following:
+#### Commands to set up the database:
+   1) 'rails db:create'
+   2) 'rails db:migrate:reset'
+   3) 'rails db:migrate'
+   4) 'rails db:seed'
 
 
-In order to run the web app, you first must find your VM's IP address by running the following command:
+### Locatable can now be ran using the following commands within the `src` folder of the cloned repository
+1)`ip addr show eth0`
+2) `rails s (or rails server) --binding xxx.xxx.xxx.xxx`
+3) The app should be available in the browser at http://csc415-serverXX.hpc.tcnj.edu:3000/ (XX is your server number)
 
-ip addr show eth0
 
-After retrieving the IP address, you can finally run the server by running:
+### Setting up the Correct Database
+* You can view the database information at http://csc415-serverXX.hpc.tcnj.edu/phpPgAdmin/
 
-rails s (or rails server) --binding xxx.xxx.xxx.xxx
-
-REMINDER: You will not be able to run the rails server unless you are in the src folder
-
-The app should be available in the browser at http://csc415-serverXX.hpc.tcnj.edu:3000/ Where XX is replaced by your server number.
-
-How to Push Changes
-
-To push your changes into your corresponding branch you will need to enter the following:
-
-'git status' (to show what changes have been made)
-'git add changed_File'
-'git commit -m “a description of what you did”'
-'git push origin HEAD:your-branch-name' 
+Locatable should now be installed! 
+Please read through [this page](More_helpful_info.md) to view the gems that are already included to better understand the current project capabilities such as a premade login/registration functionality and an administrative portal.
