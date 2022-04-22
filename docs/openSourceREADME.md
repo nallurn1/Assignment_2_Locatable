@@ -1,7 +1,8 @@
 # How Contribute to Locatable
-Be sure to carefully read all the steps down below inorder to contribute to Locatable!
 
 ***
+
+## Follow All The Steps:
 
 #### Step 1: Before contributing 
 Go through all the ruby on rails and the project Locatable installation instructions.
@@ -16,10 +17,15 @@ Go through all the ruby on rails and the project Locatable installation instruct
   * Before posting a new issues check if this issues page has a similar or the same issue that was aready solved. 
 
 #### Step 4: Pull request
-  * When you are done with your contrubitions, make a pull requests so the current administrator of this project and review the changes. If the changes have no errors and the administaor will merge the changes to the main branch of the repo. 
+  * When you are done with your contrubitions, make a pull requests so the current administrator of this project and review the changes. If the changes have no errors and the administaor will merge the changes to the main branch of the repository. 
 
-## Where To Discuss?
-Besides the issues page, there is a discussion tab on the repository. The discussion tab is open to anyone interted in imporving this project. There is also the ability to convert an issue into a discussion, and this feature can be used to discuss certain bugs or issues you may be facing. Be sure to communicate any problems with all collaborators frequently, and check the discussion tab to see any changes or updates.
+***
 
-## Maintaining Your Own Branch:
+## Where To Discuss With Other Developers?
+Besides the issues page and adding comments to pull requests, there is a discussion tab on the repository. The discussion tab is open to anyone interted in imporving this project. Using all the differnt ways of communication through github will help improve the opensource community for this project! Please stay consistent with your issues, enchanments and etc, that none of the isses or comments or discussion have the same questions being repeated. 
+
+***
+
+## Create Your Own Branch: 
+* Format for your branch: 'your_name_prototype'
 When you start to contributing to this project make your own branch within this repository and when pull and pushing make sure all the chnages only affect your branch and not the others especially not the main branch. It is also important to note use git command like 'git branch" to check what branch you are connected to in your VM.
