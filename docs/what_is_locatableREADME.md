@@ -45,20 +45,21 @@ carfully handle all the user's sensitive information.
 ## How to do Opensource Work on Locatable?
 * [Learn More About Opensource](openSourceREADME.md)
 
+***
 
-### UML Diagrams and Other Diagrams for Prototype 3
+## UML Diagrams and Other Diagrams for Prototype 3
 
-## Use Case for the project:
-![Use Case](./docs/Use_Case.jpeg)
+#### Use Case for the project:
+![Use Case](use_case.jpeg)
 
-## Use_Case_Descriptions for the project:
-![Use_Case_Descriptions.jpeg](./docs/Use_Case_Descriptions.jpeg)
+#### Use Case Descriptions for the project:
+![Use Case Descriptions.jpeg](use_case_sescription.jpeg)
 
-## Design_Class_Diagram for the project:
-![Design Class Diagram](./docs/Design_Class_Diagram.jpeg)
+#### Design Class Diagram for the project:
+![Design Class Diagram](design_class_diagram.jpeg)
 
-## System Sequence Diagram for the project:
-![System Sequence Diagram](./docs/SSD.jpeg)
+#### System Sequence Diagram for the project:
+![System Sequence Diagram](ssd.jpeg)
 
-## State Chart for the project:
-![State Chart](./docs/State_Chart.jpeg)
+#### State Chart for the project:
+![State Chart](state_chart.jpeg)
