@@ -9,7 +9,7 @@ Go through all the ruby on rails and the project Locatable installation instruct
 
 #### Step 2: Understand the archticture of the web app & documentation format
 * Review the code and the code structure for this web application. And make sure to abide by the documentation format. 
-* All the new additions to this project must be well documented code stay consistent with the existing format.
+* All the new additions to this project must be well documented code and stays consistent with the existing format.
 
 #### Step 3: Issues and Bugs
   * Use the issues feature on the GitHub repository to get some assitiance with any bugs or issues 
