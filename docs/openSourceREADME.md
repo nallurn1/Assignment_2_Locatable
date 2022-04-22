@@ -26,6 +26,5 @@ Besides the issues page and adding comments to pull requests, there is a discuss
 
 ***
 
-## Create Your Own Branch: 
-* Format for your branch: 'your_name_prototype'
+## Create Your Own Branch: (Format for your branch: 'your_name_prototype')
 When you start to contributing to this project make your own branch within this repository and when pull and pushing make sure all the chnages only affect your branch and not the others especially not the main branch. It is also important to note use git command like 'git branch" to check what branch you are connected to in your VM.
