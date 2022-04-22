@@ -5,8 +5,7 @@
   <thead>
     <tr>
       <th>Alert text</th>
-      <th>Contact</th>
-      <th>User</th>
+      <th>Contact's Name</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -16,7 +15,6 @@
       <tr>
         <td><%= alert.alert_text %></td>
         <td><%= alert.contact_id %></td>
-        <td><%= alert.user_id %></td>
         <td><%= link_to 'Show', alert %></td>
         <td><%= link_to 'Edit', edit_alert_path(alert) %></td>
         <td><%= link_to 'Delete', alert, method: :delete, data: { confirm: 'Are you sure you want to delet the alert?' } %></td>

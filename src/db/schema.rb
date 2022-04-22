@@ -17,7 +17,6 @@ ActiveRecord::Schema.define(version: 2022_04_20_180540) do
 
   create_table "alerts", force: :cascade do |t|
     t.string "alert_text"
-    t.string "alert_type"
     t.integer "contact_id"
     t.integer "user_id"
     t.datetime "created_at", precision: 6, null: false

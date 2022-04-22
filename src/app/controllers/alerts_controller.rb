@@ -8,10 +8,11 @@
 
 class AlertsController < ApplicationController
   before_action :set_alert, only: %i[ show edit update destroy ]
+  # before_filter :prepare_contacts
 
   # GET /alerts or /alerts.json
   def index
-    @alerts = Alert.all
+    @alerts = current_user.alert.all
   end
 
   # GET /alerts/1 or /alerts/1.json
@@ -20,11 +21,18 @@ class AlertsController < ApplicationController
 
   # GET /alerts/new
   def new
-    @alert = Alert.new
+    # @alert = Alert.new
+    #Alerts for current user (whoever is logged in) 
+    @alert = current_user.alert.build
+
+    #Bug here.... should not be allowed for other usesto see the contact info from other accounts
+    @contacts = Contact.all
+    # @contacts = current_user.contact.build
   end
 
   # GET /alerts/1/edit
   def edit
+    @contacts = Contact.all
   end
 
   # POST /alerts or /alerts.json
@@ -72,6 +80,10 @@ class AlertsController < ApplicationController
     def set_alert
       @alert = Alert.find(params[:id])
     end
+
+    # def prepare_contacts
+    #   @contacts = Conatact.all
+    # end
 
     # Only allow a list of trusted parameters through.
     def alert_params

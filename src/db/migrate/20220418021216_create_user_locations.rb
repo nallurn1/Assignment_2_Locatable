@@ -5,6 +5,7 @@ class CreateUserLocations < ActiveRecord::Migration[6.0]
       t.string :user_location_city
       t.string :user_location_state
       t.string :user_location_country
+      t.string :user_ip
 
       t.timestamps
     end

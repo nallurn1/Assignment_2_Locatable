@@ -16,9 +16,10 @@
     <%= form.text_field :alert_text, required: true %>
   </div>
 
-  <div class="field" class="form-group" class="form-control">
+  <div class="field">
     <%= form.label :contact_id %>
-    <%= form.number_field :contact_id %>
+    <%# <%= form.number_field :contact_id %>
+    <%= form.collection_select(:contact_id, @contacts, :id, :contact_name) %>
   </div>
 
   <div class="field">

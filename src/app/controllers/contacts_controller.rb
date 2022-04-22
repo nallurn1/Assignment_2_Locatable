@@ -11,7 +11,7 @@ class ContactsController < ApplicationController
 
   # GET /contacts or /contacts.json
   def index
-    @contacts = Contact.all
+    @contacts = current_user.contact.all
   end
 
   # GET /contacts/1 or /contacts/1.json
@@ -20,7 +20,8 @@ class ContactsController < ApplicationController
 
   # GET /contacts/new
   def new
-    @contact = Contact.new
+    # @contact = Contact.new
+    @contact = current_user.contact.build
   end
 
   # GET /contacts/1/edit

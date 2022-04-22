@@ -9,16 +9,16 @@
 
 <p id="notice"><%= notice %></p>
 
-<h1>User Profiles</h1>
+<h1>Your Profile</h1>
 
 <table class="table table-striped",style= "width:100%;text-align:left";>
   <thead>
     <tr>
       <th>Name</th>
-      <th>EMail</th>
+      <th>Email</th>
       <th>Phone</th>
-      <th>Address Line1</th>
-      <th>Address line2</th>
+      <th>Home Address Line1</th>
+      <th>Home Address line2</th>
       <th>City</th>
       <th>State</th>
       <th>Zipcode</th>
@@ -41,7 +41,7 @@
         <td><%= user_profile.user_country %></td>
         <td><%= link_to 'Show', user_profile, style: "color: black;" %></td>
         <td><%= link_to 'Edit', edit_user_profile_path(user_profile), style: "color: black;" %></td>
-        <%# <td><%= link_to 'Delete', user_profile, style: "color: black;", method: :delete, data: { confirm: 'Are you sure?' } %></td> %>
+        <%# <td><%= link_to 'Delete', user_profile, style: "color: black;", method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>

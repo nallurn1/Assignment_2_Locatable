@@ -7,8 +7,11 @@
 class AlertMailer < ApplicationMailer
     def new_alert_email
         @alert = params[:alert]
-        @contact = Contact.last
 
-        mail(to: @contact.contact_email, subject: "Important Alert")
+        #Not able to call this dynamically since there is a foreigen key relation
+        @contact = contact.first
+        # @contact = Contact.current
+
+        mail(to: @contact.contact_email, subject: "Important Alert" )
     end
 end

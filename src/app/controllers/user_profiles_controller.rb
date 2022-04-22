@@ -10,8 +10,8 @@ class UserProfilesController < ApplicationController
 
   # GET /user_profiles or /user_profiles.json
   def index
-    @user_profiles = UserProfile.where(user_id: [2])
-
+    #Current User
+    @user_profiles = current_user.user_profile.all
   end
 
   # GET /user_profiles/1 or /user_profiles/1.json
@@ -20,7 +20,8 @@ class UserProfilesController < ApplicationController
 
   # GET /user_profiles/new
   def new
-    @user_profile = UserProfile.new
+    # @user_profile = UserProfile.new
+    @user_profile = current_user.user_profile.build
   end
 
   # GET /user_profiles/1/edit

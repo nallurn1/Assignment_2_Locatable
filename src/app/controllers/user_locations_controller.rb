@@ -10,20 +10,22 @@ class UserLocationsController < ApplicationController
 
   # GET /user_locations or /user_locations.json
   def index
-    @user_locations = UserLocation.all
+    @user_locations = current_user.user_location.all
     #Currently goes to a new page to show the user their ip address
   end
 
   # GET /user_locations/1 or /user_locations/1.json
   def show
     # user_ip = "You IP address is #{client_ip}"
-    render plain: "You IP address is #{client_ip}"
+    # render plain: "You IP address is #{client_ip}"
 
   end
 
   # GET /user_locations/new
   def new
-    @user_location = UserLocation.new
+    # @user_location = UserLocation.new
+    @user_location = current_user.user_location.build
+    puts @user_location.user_ip = "#{client_ip}"
   end
 
   # GET /user_locations/1/edit
