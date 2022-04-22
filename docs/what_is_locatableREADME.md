@@ -4,6 +4,7 @@
 
 ## Problem Statement:
 How to ensure one's safety through a web application in a free and secure manner. 
+
 ***
 
 ## Objectives:
@@ -15,12 +16,12 @@ This problem is innovative because it offers older users the privacy they need i
 know your very step, this offers people a way to let their emergency contact if they feel a bit unsafe and uncertain of their safety they can get an alert sent out. 
 The current apps out in the market, whether they are mobile and or web-based apps, they have features of alerting the user’s emergency contacts about where they 
 are at all times, or to get help from local authorities, however many of these features cost money and are required for some sort of monthly subscription. Safety is 
-a basic human right,no one should be afraid of not being able to go back home, and for that reason the Locatable web-based app will be free to its users c
+a basic human right,no one should be afraid of not being able to go back home, and for that reason the Locatable web-based app will be free to its users
 carfully handle all the user's sensitive information.
 
 ***
 ## Instructions for Installation:
-* [Learn More About Opensource](openSourceREADME.md)
+* [Instructions](instructions_README.md)
 
 ## Opensource Maintenance Rules:
 #### Rule 1: What is not helpful opensource contributions 
