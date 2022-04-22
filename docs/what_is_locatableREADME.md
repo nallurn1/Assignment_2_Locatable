@@ -20,17 +20,7 @@ carfully handle all the user's sensitive information.
 
 ***
 ## Instructions for Installation:
-Within your desired VM directory for your project, to clone the repository link: 'https://github.com/nallurn1/Assignment_2_Locatable.git'
-
-After cloning the main branch, do the following installations. Assume you already set up ruby on rails correctly as exaplained here:  
-1) 'bundle install'
-2) 'yarn install'
-3) 
-
-Inorder to create the sql postgres database do the following commands:
-1) 'rails db:create'
-2) 'rake db:schema:load'
-3) 'rails db:seed'
+* [Learn More About Opensource](openSourceREADME.md)
 
 ## Opensource Maintenance Rules:
 #### Rule 1: What is not helpful opensource contributions 
@@ -49,10 +39,25 @@ Inorder to create the sql postgres database do the following commands:
   * The code must be well commmented/documented and explains the functionilities of the web application
   * The code should have error handeling and validation checks of the users input when needed
 
+***
+
 ## How to do Opensource Work on Locatable?
 * [Learn More About Opensource](openSourceREADME.md)
 
 
-### UML Diagrams and Other Diagrams 
+### UML Diagrams and Other Diagrams for Prototype 3
 
-Use Case:
+## Use Case for the project:
+![Use Case](./docs/Use_Case.jpeg)
+
+## Use_Case_Descriptions for the project:
+![Use_Case_Descriptions.jpeg](./docs/Use_Case_Descriptions.jpeg)
+
+## Design_Class_Diagram for the project:
+![Design Class Diagram](./docs/Design_Class_Diagram.jpeg)
+
+## System Sequence Diagram for the project:
+![System Sequence Diagram](./docs/SSD.jpeg)
+
+## State Chart for the project:
+![State Chart](./docs/State_Chart.jpeg)
