@@ -1,3 +1,9 @@
+ # Project name: Locatable
+ # Description: Sending out alerts to the user's close contacts when they are in possible danger
+ # Filename: alert.rb
+ # Description: Default app configuation validations 
+ # Last modified on: 4/20/22
+
 # frozen_string_literal: true
 
 # global app configuration model

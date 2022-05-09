@@ -1,3 +1,10 @@
+ # Project name: Locatable
+ # Description: Sending out alerts to the user's close contacts when they are in possible danger
+ # Filename: test.rb
+ # Description: this has all the configations used when the website is running the test cases 
+ # Last modified on: 4/20/22
+ # Code written by Nithya Nalluri
+
 # frozen_string_literal: true
 
 # The test environment is used exclusively to run your application's

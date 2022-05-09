@@ -6,7 +6,7 @@ module ApplicationHelper
   def app_name
     conf = app_config
     if conf.nil?
-      '?'
+      'Locatable'
     else
       conf.name
     end

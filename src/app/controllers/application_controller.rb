@@ -1,3 +1,10 @@
+ # Project name: Locatable
+ # Description: Sending out alerts to the user's close contacts when they are in possible danger
+ # Filename: application_controller.rb
+ # Description: No login needed for the application
+ # Last modified on: 4/20/22
+ # Code written by Nithya Nalluri
+
 # frozen_string_literal: true
 
 # This is the main controller for the entire project
