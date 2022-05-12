@@ -43,9 +43,9 @@ Locatable is a web application that focuses on ensureing everyone has access to 
 * [Issue #16](https://github.com/nallurn1/Assignment_2_Locatable/issues/16)
 
 ### Updated Diagrams 
-* [System Sequence Diagram](docs/Installation_Guide.md)
-* [Design Class Diagram](docs/Installation_Guide.md)
-* [UI Mock-Up](docs/Installation_Guide.md)
+* [System Sequence Diagram](docs/CSC_415_SSD.png)
+* [Design Class Diagram](docs/CSC_415_DCD.png)
+* [UI Mock-Up](docs/CSC_415_mockup.png)
 
 
 
