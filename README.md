@@ -21,8 +21,11 @@ Locatable is a web application that focuses on ensureing everyone has access to 
 * If the returned result is not ‘*final-exam’, enter: git checkout final-exam
 ##### Running the web application 
 * rails server --binding=10.18.6.16 
-##### Once web application is running, open the web application on browser
+##### Once web application is running, open the web application in a browser
 * http://csc415-server16.hpc.tcnj.edu:3000
+* Login
+  1) Email: user@example.com
+  2) Password: password
 ##### Where is the search location functionality?
 * In the nav bar click on Manage Your Locations
 * Or  http://csc415-server16.hpc.tcnj.edu:3000/user_locations
