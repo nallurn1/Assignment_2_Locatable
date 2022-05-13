@@ -42,10 +42,13 @@ Locatable is a web application that focuses on ensureing everyone has access to 
 ###### Non-Funcational Requiment 
 * [Issue #16](https://github.com/nallurn1/Assignment_2_Locatable/issues/16)
 
-### Updated Diagrams 
-* [System Sequence Diagram](docs/CSC_415_SSD.jpeg)
-* [Design Class Diagram](docs/CSC_415_DCD.jpeg)
-* [UI Mock-Up](docs/CSC_415_mockup.jpeg)
+### Updated Diagrams For Final Exam
+#### System Sequence Diagram:
+![System Sequence Diagram](docs/CSC_415_SSD.jpeg)
+#### Design Class Diagram:
+![Design Class Diagram](docs/CSC_415_DCD.jpeg)
+#### Mock-Up:
+![UI Mock-Up](docs/CSC_415_mockup.jpeg)
 
 
 
