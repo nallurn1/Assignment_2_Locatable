@@ -1,24 +1,23 @@
- # Project name: Locatable
+# Project name: Locatable
  # Description: Sending out alerts to the user's close contacts when they are in possible danger
- # Filename: user_loactions_controller.rb
+ # Filename: user_locations_controller.rb
  # Description: The CRUD functionilities needed for the user_locations
- # Last modified on: 4/20/22
+ # Last modified on: 5/12/22
  # Code written by Nithya Nalluri
 
-class UserLocationsController < ApplicationController
+ class UserLocationsController < ApplicationController
   before_action :set_user_location, :make_abstract_request, only: %i[ show edit update destroy ]
 
   # GET /user_locations or /user_locations.json
   def index
-    @user_locations = current_user.user_location.all
-    #Currently goes to a new page to show the user their ip address
+    #Where the search function is being called
+    @user_locations = UserLocation.search(params[:search])
   end
 
   # GET /user_locations/1 or /user_locations/1.json
   def show
     # user_ip = "You IP address is #{client_ip}"
     # render plain: "You IP address is #{client_ip}"
-
   end
 
   # GET /user_locations/new
@@ -110,6 +109,7 @@ class UserLocationsController < ApplicationController
     def user_location_params
       # params[:user_location][:user_ip] = request.ip
       # @user_loaction = UserLocation,create(params[:user_location])
-      params.require(:user_location).permit(:user_location_street, :user_location_city, :user_location_state, :user_location_country, :user_id, :user_ip)
+      params.require(:user_location).permit(:user_location_street, :user_location_city, :user_location_state, :user_location_country, :user_id, :user_ip, :search)
     end
 end
+
